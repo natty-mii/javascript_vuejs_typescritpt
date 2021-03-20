@@ -17,7 +17,8 @@
             <script>
                 const today = new Date();
                 const week = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
-                document.write(week[today.getDay()]);
+                let week_jp = week[today.getDay()];
+                document.write(`今日は、英語で曜日を書くと、${week_jp}だよ。`);
                 // document.write(today.getDay());
             </script>
         </div>
