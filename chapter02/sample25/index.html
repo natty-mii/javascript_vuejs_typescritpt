@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+    <div class="frame">
+        <h1 class="frame__title">JavaScript</h1>
+
+        <div class="frame__inner">
+            <!-- ここに、JavaScriptを記述します -->
+            <script>
+                //正規表現で、頭とお尻の / /gは決まり。　その後の^ハットは最初ですよということ。
+                //お尻の $は最後ですよ。と表す。\dはデシマルの数字　中カッコの{}は桁数。
+                const zip_pattern = /^\d{3}-?\d{4}$/g;
+                let zip = prompt('郵便番号を入力してください')
+                // let zip = '111-2222';
+
+                if (zip_pattern.test(zip)) {
+                    document.write('正しく入力されました。');
+                } else {
+                    document.write('郵便番号をXXX-XXXXの書式で入力してください');
+                }
+
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
