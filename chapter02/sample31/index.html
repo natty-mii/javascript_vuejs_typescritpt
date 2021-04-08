@@ -19,7 +19,8 @@
             <button id="save">メールアドレスを保存する</button>
             <script>
                 document.getElementById('save').addEventListener('click', function() {
-                    
+                    let email = encodeURIComponent(document.getElementById('email').value);
+                    document.cookie = 'email=' + email + ';max-age=3600';
                 })
             </script>
         </div>
