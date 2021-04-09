@@ -18,10 +18,20 @@
             </div>
             <button id="save">メールアドレスを保存する</button>
             <script>
+                const getCookie = (key) => {
+                    let k = document.cookie.split('=');
+                    if (k[0] === key) {
+                        return decodeURIComponent(k[1]);
+                    }
+                }
+
                 document.getElementById('save').addEventListener('click', function() {
                     let email = encodeURIComponent(document.getElementById('email').value);
-                    document.cookie = 'email=' + email + ';max-age=3600';
+                    document.cookie = 'email=' + email + '; max-age=3600';
                 })
+
+                document.getElementById('email').value = getCookie('email');
+                alert(getCookie('email'));
             </script>
         </div>
     </div>
